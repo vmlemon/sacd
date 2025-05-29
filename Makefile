@@ -15,7 +15,7 @@ VPATH = libdstdec:libdsd2pcm:libsacd
 INCLUDE_DIRS = libdstdec libdsd2pcm libsacd
 CPPFLAGS = $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir))
 
-LIBRARIES =  pthread
+LIBRARIES = iconv pthread
 LIBRARY_DIRS = libdstdec libdsd2pcm libsacd
 LDFLAGS = $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir))
 LDFLAGS += $(foreach library,$(LIBRARIES),-l$(library))
